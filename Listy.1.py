@@ -5,4 +5,4 @@ while len(d) <10:
     d.append(elem)
 print(d)
 
-print(sum(d))
+print(sum(d)/10)
