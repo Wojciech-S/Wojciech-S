@@ -1,24 +1,29 @@
-class ElectricCar:
+class ElectricCar(100):
     pass
 
 #car = ElectricCar(100) #ilość kilometrów, które przejedzie
 #car.drive(70) #ile już przejechaliśmy
 #charge #ładowanie baterii
-def test_dystans_max(self):
-    car = ElectricCar(100)
-    assert car.dystans() == 100
+car = ElectricCar(100)
+car.drive(70)
+car.charge = car
 
-def test_dystans_mozliwy(self):
+def test_dystans_max():
+    car = ElectricCar(100)
+    assert car.dystans_max == 100
+
+def test_dystans_mozliwy():
     car = ElectricCar(100)
     car.drive(70)
-    assert car.drive() == 70
-    assert car.drive() == 100
+    assert car.dystans_mozliwy(70) == 70
+    assert car.dystans_mozliwy(100) == 100
 
-def test_dystans_ponad(self):
+def test_dystans_ponad():
     car = ElectricCar(100)
     car.drive(120)
-    assert car.drive() == 100
+    assert car.dystans_ponad(120) == 100
 
-def test_charge(self):
+def test_charge():
     car = ElectricCar(100)
-    car.charge() == 100
+    car.charge == car.dystans
+    assert car.charge == 100
